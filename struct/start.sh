@@ -3,4 +3,4 @@ make clear
 # 编译C代码
 make
 # 运行
-./struct_insert
+./bin/struct_insert

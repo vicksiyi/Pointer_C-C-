@@ -37,5 +37,5 @@ main()
 	node2.link  = NULL;	
 	int result = sll_insert(&node1,20);
 	printf("结果：%d\n",result);
-	return 0;
+    return 0;
 }

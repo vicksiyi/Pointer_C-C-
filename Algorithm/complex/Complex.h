@@ -11,18 +11,8 @@ public:
         : R(real), I(img)
     {};
     void ptr();
-    complex operator + (const complex& mid)
-    {
-        complex tmp;
-        tmp.R = R + mid.R; tmp.I = I + mid.I;
-        return tmp;
-    }
-    complex operator - (const complex& mid)
-    {
-        complex tmp;
-        tmp.R = R - mid.R; tmp.I = I - mid.I;
-        return tmp;
-    }
+    complex operator + (const complex&);
+    complex operator - (const complex&);
 };
 
 void complex::ptr()
@@ -30,11 +20,17 @@ void complex::ptr()
     cout<<"("<<R<<","<<I<<")"<<endl;
     return;    
 }
-/*
-complex operator + (complex& mid)
+
+complex complex::operator + (const complex& mid)
 {
     complex tmp;
     tmp.R = R + mid.R; tmp.I = I + mid.I;
     return tmp;
 }
-*/
+
+complex complex::operator - (const complex& mid)
+{
+    complex tmp;
+    tmp.R = R - mid.R; tmp.I = I - mid.I;
+    return tmp;
+}
